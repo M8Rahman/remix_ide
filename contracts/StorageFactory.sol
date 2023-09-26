@@ -12,8 +12,7 @@ contract StorageFactory{
 
     function sfstore(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public{
         //to interact with other contracts a function needs two thing: 1)Address 2)ABI - application binary interface(tells our code exactly how it acn interact with the contract)
-        SimpleStorage simpleStorage = simpleStorageArray[_simpleStorageIndex];
-        simpleStorage.store(_simpleStorageNumber);
+        simpleStorageArray[_simpleStorageIndex].store(_simpleStorageNumber);
     }
 
     function sfGet(uint256 _simpleStorageIndex) public view returns(uint256){
